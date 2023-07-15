@@ -3,6 +3,9 @@ from langchain.llms import OpenAI
 from lwe.core.provider import Provider, PresetValue
 
 class ProviderOpenai(Provider):
+    """
+    Access to non-chat OpenAI models (GPT-3, etc.)
+    """
 
     @property
     def capabilities(self):
