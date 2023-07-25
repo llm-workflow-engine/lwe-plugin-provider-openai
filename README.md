@@ -25,7 +25,7 @@ git clone https://github.com/llm-workflow-engine/lwe-plugin-provider-openai.git
 Install the development package:
 
 ```bash
-cd llm-workflow-engine
+cd lwe-plugin-provider-openai
 pip install -e .
 ```
 
