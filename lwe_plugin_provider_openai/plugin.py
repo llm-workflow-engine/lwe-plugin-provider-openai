@@ -13,6 +13,23 @@ class ProviderOpenai(Provider):
             'streaming': True,
             'validate_models': False,
             'models': {
+                # TODO: Activate these when they go live in Completions API.
+                # 'ada-002': {
+                #     'max_tokens': 2049,
+                # },
+                # 'babbage-002': {
+                #     'max_tokens': 2049,
+                # },
+                # 'curie-002': {
+                #     'max_tokens': 2049,
+                # },
+                # 'davinci-002': {
+                #     'max_tokens': 2049,
+                # },
+                # 'gpt-3.5-turbo-instruct': {
+                #     'max_tokens': 4096,
+                # },
+                # TODO: Remove these deprecated models Jan. 4th, 2024.
                 'text-ada-001': {
                     'max_tokens': 2049,
                 },
