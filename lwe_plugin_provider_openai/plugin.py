@@ -10,7 +10,6 @@ class ProviderOpenai(Provider):
     @property
     def capabilities(self):
         return {
-            'streaming': True,
             'validate_models': False,
             'models': {
                 # TODO: Activate these when they go live in Completions API.
@@ -78,7 +77,6 @@ class ProviderOpenai(Provider):
             'openai_api_key': PresetValue(str, include_none=True, private=True),
             'openai_organization': PresetValue(str, include_none=True, private=True),
             'request_timeout': PresetValue(int),
-            'streaming': PresetValue(bool),
             'n': PresetValue(int, 1, 10),
             'max_tokens': PresetValue(int, include_none=True),
             'top_p': PresetValue(float, min_value=0.0, max_value=1.0),
