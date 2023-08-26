@@ -12,19 +12,12 @@ class ProviderOpenai(Provider):
         return {
             'validate_models': False,
             'models': {
-                # TODO: Activate these when they go live in Completions API.
-                # 'ada-002': {
-                #     'max_tokens': 2049,
-                # },
-                # 'babbage-002': {
-                #     'max_tokens': 2049,
-                # },
-                # 'curie-002': {
-                #     'max_tokens': 2049,
-                # },
-                # 'davinci-002': {
-                #     'max_tokens': 2049,
-                # },
+                'babbage-002': {
+                    'max_tokens': 2049,
+                },
+                'davinci-002': {
+                    'max_tokens': 2049,
+                },
                 # 'gpt-3.5-turbo-instruct': {
                 #     'max_tokens': 4096,
                 # },
