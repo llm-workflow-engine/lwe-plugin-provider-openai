@@ -12,6 +12,9 @@ class ProviderOpenai(Provider):
         return {
             'validate_models': False,
             'models': {
+                "gpt-3.5-turbo-instruct": {
+                    "max_tokens": 4096,
+                },
                 'babbage-002': {
                     'max_tokens': 2049,
                 },
