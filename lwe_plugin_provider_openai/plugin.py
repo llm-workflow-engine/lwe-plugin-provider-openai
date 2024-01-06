@@ -21,29 +21,25 @@ class ProviderOpenai(Provider):
                 'davinci-002': {
                     'max_tokens': 2049,
                 },
-                # 'gpt-3.5-turbo-instruct': {
-                #     'max_tokens': 4096,
+                # NOTE: OpenAI discontinued these models.
+                # 'text-ada-001': {
+                #     'max_tokens': 2049,
                 # },
-                # TODO: Remove these deprecated models Jan. 4th, 2024.
-                'text-ada-001': {
-                    'max_tokens': 2049,
-                },
-                'text-babbage-001': {
-                    'max_tokens': 2049,
-                },
-                'text-curie-001': {
-                    'max_tokens': 2049,
-                },
-                'text-davinci-001': {
-                    'max_tokens': 2049,
-                },
-                'text-davinci-002': {
-                    'max_tokens': 2049,
-                },
-                'text-davinci-003': {
-                    'max_tokens': 2049,
-                },
-                # NOTE: It appears OpenAI discontinued these models.
+                # 'text-babbage-001': {
+                #     'max_tokens': 2049,
+                # },
+                # 'text-curie-001': {
+                #     'max_tokens': 2049,
+                # },
+                # 'text-davinci-001': {
+                #     'max_tokens': 2049,
+                # },
+                # 'text-davinci-002': {
+                #     'max_tokens': 2049,
+                # },
+                # 'text-davinci-003': {
+                #     'max_tokens': 2049,
+                # },
                 # 'code-davinci-002': {
                 #     'max_tokens': 8001,
                 # },
@@ -61,7 +57,7 @@ class ProviderOpenai(Provider):
 
     @property
     def default_model(self):
-        return 'text-davinci-003'
+        return 'gpt-3.5-turbo-instruct'
 
     def llm_factory(self):
         return OpenAI
