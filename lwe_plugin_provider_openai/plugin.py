@@ -1,4 +1,4 @@
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
 
 from lwe.core.provider import Provider, PresetValue
 
