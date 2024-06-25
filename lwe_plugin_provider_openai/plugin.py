@@ -11,53 +11,56 @@ class ProviderOpenai(Provider):
     def capabilities(self):
         return {
             'validate_models': False,
-            'models': {
-                "gpt-3.5-turbo-instruct": {
-                    "max_tokens": 4096,
-                },
-                'babbage-002': {
-                    'max_tokens': 2049,
-                },
-                'davinci-002': {
-                    'max_tokens': 2049,
-                },
-                # NOTE: OpenAI discontinued these models.
-                # 'text-ada-001': {
-                #     'max_tokens': 2049,
-                # },
-                # 'text-babbage-001': {
-                #     'max_tokens': 2049,
-                # },
-                # 'text-curie-001': {
-                #     'max_tokens': 2049,
-                # },
-                # 'text-davinci-001': {
-                #     'max_tokens': 2049,
-                # },
-                # 'text-davinci-002': {
-                #     'max_tokens': 2049,
-                # },
-                # 'text-davinci-003': {
-                #     'max_tokens': 2049,
-                # },
-                # 'code-davinci-002': {
-                #     'max_tokens': 8001,
-                # },
-                # 'code-davinci-001': {
-                #     'max_tokens': 8001,
-                # },
-                # 'code-cushman-002': {
-                #     'max_tokens': 2048,
-                # },
-                # 'code-cushman-001': {
-                #     'max_tokens': 2048,
-                # },
-            }
         }
 
     @property
     def default_model(self):
         return 'gpt-3.5-turbo-instruct'
+
+    @property
+    def static_models(self):
+        return {
+            "gpt-3.5-turbo-instruct": {
+                "max_tokens": 4096,
+            },
+            'babbage-002': {
+                'max_tokens': 2049,
+            },
+            'davinci-002': {
+                'max_tokens': 2049,
+            },
+            # NOTE: OpenAI discontinued these models.
+            # 'text-ada-001': {
+            #     'max_tokens': 2049,
+            # },
+            # 'text-babbage-001': {
+            #     'max_tokens': 2049,
+            # },
+            # 'text-curie-001': {
+            #     'max_tokens': 2049,
+            # },
+            # 'text-davinci-001': {
+            #     'max_tokens': 2049,
+            # },
+            # 'text-davinci-002': {
+            #     'max_tokens': 2049,
+            # },
+            # 'text-davinci-003': {
+            #     'max_tokens': 2049,
+            # },
+            # 'code-davinci-002': {
+            #     'max_tokens': 8001,
+            # },
+            # 'code-davinci-001': {
+            #     'max_tokens': 8001,
+            # },
+            # 'code-cushman-002': {
+            #     'max_tokens': 2048,
+            # },
+            # 'code-cushman-001': {
+            #     'max_tokens': 2048,
+            # },
+        }
 
     def llm_factory(self):
         return OpenAI
